@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jizhiyi.github.io/"/>
-  <updated>2020-07-18T10:16:14.140Z</updated>
+  <updated>2020-07-18T10:26:27.792Z</updated>
   <id>https://jizhiyi.github.io/</id>
   
   <author>
@@ -21,17 +21,22 @@
     <link href="https://jizhiyi.github.io/2020/07/18/python%E4%B8%AD%E4%BD%BF%E7%94%A8mRMR/"/>
     <id>https://jizhiyi.github.io/2020/07/18/python%E4%B8%AD%E4%BD%BF%E7%94%A8mRMR/</id>
     <published>2020-07-18T09:51:13.366Z</published>
-    <updated>2020-07-18T10:16:14.140Z</updated>
+    <updated>2020-07-18T10:26:27.792Z</updated>
     
     <summary type="html">
     
-      &lt;hr&gt;
-&lt;h2 id=&quot;title-python中使用mRMR&quot;&gt;&lt;a href=&quot;#title-python中使用mRMR&quot; class=&quot;headerlink&quot; title=&quot;title:python中使用mRMR&quot;&gt;&lt;/a&gt;title:python中使用mRMR&lt;/h2&gt;&lt;h1 id=&quot;mRMR&quot;&gt;&lt;a href=&quot;#mRMR&quot; class=&quot;headerlink&quot; title=&quot;mRMR&quot;&gt;&lt;/a&gt;mRMR&lt;/h1&gt;&lt;p&gt;Max-Relevance and Min-Redundancy&lt;br&gt;最大相关 - 最小冗余&lt;br&gt;相信读到这篇博客的你，应该是知道mRMR的原理的，所以就不再解释了&lt;/p&gt;
+      &lt;h1 id=&quot;mRMR&quot;&gt;&lt;a href=&quot;#mRMR&quot; class=&quot;headerlink&quot; title=&quot;mRMR&quot;&gt;&lt;/a&gt;mRMR&lt;/h1&gt;&lt;p&gt;Max-Relevance and Min-Redundancy&lt;br&gt;最大相关 - 最小冗余&lt;br&gt;相信读到这篇博客的你，应该是知道mRMR的原理的，所以就不再解释了&lt;/p&gt;
 &lt;p&gt;重点是在python中使用mRMR&lt;/p&gt;
     
     </summary>
     
     
+      <category term="机器学习应用" scheme="https://jizhiyi.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%BA%94%E7%94%A8/"/>
+    
+    
+      <category term="Python" scheme="https://jizhiyi.github.io/tags/Python/"/>
+    
+      <category term="机器学习" scheme="https://jizhiyi.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   

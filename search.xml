@@ -3,8 +3,7 @@
   <entry>
     <title>python中使用mRMR</title>
     <url>/2020/07/18/python%E4%B8%AD%E4%BD%BF%E7%94%A8mRMR/</url>
-    <content><![CDATA[<hr>
-<h2 id="title-python中使用mRMR"><a href="#title-python中使用mRMR" class="headerlink" title="title:python中使用mRMR"></a>title:python中使用mRMR</h2><h1 id="mRMR"><a href="#mRMR" class="headerlink" title="mRMR"></a>mRMR</h1><p>Max-Relevance and Min-Redundancy<br>最大相关 - 最小冗余<br>相信读到这篇博客的你，应该是知道mRMR的原理的，所以就不再解释了</p>
+    <content><![CDATA[<h1 id="mRMR"><a href="#mRMR" class="headerlink" title="mRMR"></a>mRMR</h1><p>Max-Relevance and Min-Redundancy<br>最大相关 - 最小冗余<br>相信读到这篇博客的你，应该是知道mRMR的原理的，所以就不再解释了</p>
 <p>重点是在python中使用mRMR</p>
 <a id="more"></a>
 
@@ -38,5 +37,12 @@
 <h2 id="问题-1"><a href="#问题-1" class="headerlink" title="问题"></a>问题</h2><p>能直接跑很大的数据，但是运行时间就有点一言难尽了</p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>这两种或者三种方法，有时得出的结果是不一样的，如果不想去探究原因的话，就使用对模型更加有作用的结果。<br>上面的过程有点省略，有什么问题或者不明白的，可以私信我。</p>
 ]]></content>
+      <categories>
+        <category>机器学习应用</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>机器学习</tag>
+      </tags>
   </entry>
 </search>
