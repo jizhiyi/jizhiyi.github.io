@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Jizhihong</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://jizhiyi.github.io/"/>
+  <updated>2020-07-18T09:54:58.553Z</updated>
+  <id>https://jizhiyi.github.io/</id>
+  
+  <author>
+    <name>jizhihong</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2020-07-18</title>
+    <link href="https://jizhiyi.github.io/2020/07/18/2020-07-18/"/>
+    <id>https://jizhiyi.github.io/2020/07/18/2020-07-18/</id>
+    <published>2020-07-18T09:51:13.366Z</published>
+    <updated>2020-07-18T09:54:58.553Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;@&lt;a href=&quot;python中使用mRMR&quot;&gt;TOC&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;mRMR&quot;&gt;&lt;a href=&quot;#mRMR&quot; class=&quot;headerlink&quot; title=&quot;mRMR&quot;&gt;&lt;/a&gt;mRMR&lt;/h1&gt;&lt;p&gt;Max-Relevance and
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>

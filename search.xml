@@ -1,21 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/07/18/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+    <title>2020-07-18</title>
+    <url>/2020/07/18/2020-07-18/</url>
+    <content><![CDATA[<p>@<a href="python中使用mRMR">TOC</a></p>
+<h1 id="mRMR"><a href="#mRMR" class="headerlink" title="mRMR"></a>mRMR</h1><p>Max-Relevance and Min-Redundancy<br>最大相关 - 最小冗余<br>相信读到这篇博客的你，应该是知道mRMR的原理的，所以就不再解释了</p>
+<h1 id="pymrmr模块"><a href="#pymrmr模块" class="headerlink" title="pymrmr模块"></a>pymrmr模块</h1><p><a href="https://github.com/fbrundu/pymrmr" target="_blank" rel="noopener">github链接</a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip install numpy Cython</span><br><span class="line">pip install pymrmr</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>在windows上有可能会出现:<br>error: Microsoft Visual C++ 14.0 is required这样的错误<br>我用的是Ubuntu，linux就是好</p>
+</blockquote>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pymrmr</span><br><span class="line">....</span><br><span class="line">pymrmr.mRMR(df, <span class="string">'MIQ'</span>, <span class="number">10</span>)</span><br><span class="line">....</span><br></pre></td></tr></table></figure>
+<h3 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h3><p>上面的代码省略了很多，大概看个样子就好了</p>
+<ul>
+<li>参数1<br>  pandas.DataFrame<br>  第一列要是目标量<br>  其他列要是特征量<br>  最神奇的是，列的名称要是字符串</li>
+<li>参数2<br>  str<br>  内部选择的方法，有两种取值‘MID’和’MIQ’</li>
+<li>参数3<br>  int<br>  要选取的特征数量<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2>说说我遇到的问题：<br>我要处理的数据有3000+行、20000+列，运行到一半就会报一个内存错误<br>能想到的方法:</li>
+<li>去改变模块的源码(未成功)<br>  去看了这个模块的源码，竟然是熟悉的c++，然后看看了，感觉看懂了，之间将其开辟空间的地方直接改成自己需要的，然后。。。。。。。</li>
+<li>使用mrmr程序<br>  <a href="http://home.penglab.com/proj/mRMR/" target="_blank" rel="noopener">地址</a><br>  这个是在pymrmr的github上看到的，可以在线执行mrmr，不过提交的数据不能超过2MB，然后往下翻，能看到这个<br>  <img src="../images/20200718_1.png" alt="在这里插入图片描述"><br>  根据自己的系统下载可执行文件，在终端执行<br>  <img src="../images/20200718_2.png" alt="在这里插入图片描述"><br>可以看到其参数，就没在这里解释其参数了，值得注意的是，如果数据太大的要，要手动设置行和列。<br>演示这个我用的是win10，因为我是双系统啊，<del>双系统就是好</del><br>如果在加上os.system()就能不需要单独去运行这个程序了，这里没给出实现方法</li>
+</ul>
+<h1 id="mifs模块"><a href="#mifs模块" class="headerlink" title="mifs模块"></a>mifs模块</h1><p><a href="https://github.com/danielhomola/mifs" target="_blank" rel="noopener">github链接</a></p>
+<h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><p>好像没有pip install的样子<br>得从上面的github链接，clone或者下载下来<br>在此之前需要安装</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scipy(&gt;&#x3D;0.17.0)</span><br><span class="line">numpy(&gt;&#x3D;1.10.4)</span><br><span class="line">scikit-learn(&gt;&#x3D;0.17.1)</span><br><span class="line">bottleneck(&gt;&#x3D;1.1.0)</span><br></pre></td></tr></table></figure>
+<p>再进入下载的目录执行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">python setup.py install</span><br></pre></td></tr></table></figure>
+<h2 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> mifs</span><br><span class="line">....</span><br><span class="line">feat_selector = mifs.MutualInformationFeatureSelector(method=<span class="string">'MRMR'</span>)</span><br><span class="line"><span class="comment"># 参数说明</span></span><br><span class="line"><span class="comment"># method: str, 互信息的特征选择方法，取值有'JMI','JMIM','MRMR'</span></span><br><span class="line"><span class="comment"># n_features: int or str, 需要选择出的特征数量</span></span><br><span class="line"><span class="comment"># verbose: int, 在运行的时候，输出的详细星x系的程度， 取值0,1,2，可以自己试试看看效果</span></span><br><span class="line">feat_selector.fit(x, y)</span><br><span class="line"><span class="comment"># 说明</span></span><br><span class="line"><span class="comment"># x 特征矩阵,推荐是numpy.array，pandas.DataFrame好像不行呢</span></span><br><span class="line"><span class="comment"># y 标签值，推荐是numpy.array</span></span><br><span class="line">feat_selector.ranking_</span><br><span class="line"><span class="comment"># 得到列的索引，从0开始</span></span><br><span class="line">....</span><br></pre></td></tr></table></figure>
+<h2 id="问题-1"><a href="#问题-1" class="headerlink" title="问题"></a>问题</h2><p>能直接跑很大的数据，但是运行时间就有点一言难尽了</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>这两种或者三种方法，有时得出的结果是不一样的，如果不想去探究原因的话，就使用对模型更加有作用的结果。<br>上面的过程有点省略，有什么问题或者不明白的，可以私信我。</p>
 ]]></content>
   </entry>
 </search>
