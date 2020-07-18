@@ -9,7 +9,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    2020-07-18 |  Jizhihong
+    python中使用mRMR |  Jizhihong
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -45,7 +45,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-2020-07-18"
+  id="post-python中使用mRMR"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -56,14 +56,14 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  2020-07-18
+  python中使用mRMR
 </h1>
  
 
     </header>
      
     <div class="article-meta">
-      <a href="/2020/07/18/2020-07-18/" class="article-date">
+      <a href="/2020/07/18/python%E4%B8%AD%E4%BD%BF%E7%94%A8mRMR/" class="article-date">
   <time datetime="2020-07-18T09:51:13.366Z" itemprop="datePublished">2020-07-18</time>
 </a>   
 <div class="word_count">
@@ -71,7 +71,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">741</span>
+            <span class="post-count">752</span>
         </span>
     </span>
 
@@ -95,8 +95,11 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <p>@<a href="python中使用mRMR">TOC</a></p>
-<h1 id="mRMR"><a href="#mRMR" class="headerlink" title="mRMR"></a>mRMR</h1><p>Max-Relevance and Min-Redundancy<br>最大相关 - 最小冗余<br>相信读到这篇博客的你，应该是知道mRMR的原理的，所以就不再解释了</p>
+  <hr>
+<h2 id="title-python中使用mRMR"><a href="#title-python中使用mRMR" class="headerlink" title="title:python中使用mRMR"></a>title:python中使用mRMR</h2><h1 id="mRMR"><a href="#mRMR" class="headerlink" title="mRMR"></a>mRMR</h1><p>Max-Relevance and Min-Redundancy<br>最大相关 - 最小冗余<br>相信读到这篇博客的你，应该是知道mRMR的原理的，所以就不再解释了</p>
+<p>重点是在python中使用mRMR</p>
+<a id="more"></a>
+
 <h1 id="pymrmr模块"><a href="#pymrmr模块" class="headerlink" title="pymrmr模块"></a>pymrmr模块</h1><p><a href="https://github.com/fbrundu/pymrmr" target="_blank" rel="noopener">github链接</a></p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install numpy Cython</span><br><span class="line">pip install pymrmr</span><br></pre></td></tr></table></figure>
 <blockquote>
@@ -105,11 +108,18 @@
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymrmr</span><br><span class="line">....</span><br><span class="line">pymrmr.mRMR(df, <span class="string">'MIQ'</span>, <span class="number">10</span>)</span><br><span class="line">....</span><br></pre></td></tr></table></figure>
 <h3 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h3><p>上面的代码省略了很多，大概看个样子就好了</p>
 <ul>
-<li>参数1<br>  pandas.DataFrame<br>  第一列要是目标量<br>  其他列要是特征量<br>  最神奇的是，列的名称要是字符串</li>
-<li>参数2<br>  str<br>  内部选择的方法，有两种取值‘MID’和’MIQ’</li>
-<li>参数3<br>  int<br>  要选取的特征数量<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2>说说我遇到的问题：<br>我要处理的数据有3000+行、20000+列，运行到一半就会报一个内存错误<br>能想到的方法:</li>
-<li>去改变模块的源码(未成功)<br>  去看了这个模块的源码，竟然是熟悉的c++，然后看看了，感觉看懂了，之间将其开辟空间的地方直接改成自己需要的，然后。。。。。。。</li>
-<li>使用mrmr程序<br>  <a href="http://home.penglab.com/proj/mRMR/" target="_blank" rel="noopener">地址</a><br>  这个是在pymrmr的github上看到的，可以在线执行mrmr，不过提交的数据不能超过2MB，然后往下翻，能看到这个<br>  <img src="../images/20200718_1.png" alt="在这里插入图片描述"><br>  根据自己的系统下载可执行文件，在终端执行<br>  <img src="../images/20200718_2.png" alt="在这里插入图片描述"><br>可以看到其参数，就没在这里解释其参数了，值得注意的是，如果数据太大的要，要手动设置行和列。<br>演示这个我用的是win10，因为我是双系统啊，<del>双系统就是好</del><br>如果在加上os.system()就能不需要单独去运行这个程序了，这里没给出实现方法</li>
+<li><p>参数1<br>  pandas.DataFrame<br>  第一列要是目标量<br>  其他列要是特征量<br>  最神奇的是，列的名称要是字符串</p>
+</li>
+<li><p>参数2<br>  str<br>  内部选择的方法，有两种取值‘MID’和’MIQ’</p>
+</li>
+<li><p>参数3<br>  int<br>  要选取的特征数量</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>说说我遇到的问题：<br>我要处理的数据有3000+行、20000+列，运行到一半就会报一个内存错误<br>能想到的方法:</p>
+</li>
+<li><p>去改变模块的源码(未成功)<br>  去看了这个模块的源码，竟然是熟悉的c++，然后看看了，感觉看懂了，之间将其开辟空间的地方直接改成自己需要的，然后。。。。。。。</p>
+</li>
+<li><p>使用mrmr程序<br>  <a href="http://home.penglab.com/proj/mRMR/" target="_blank" rel="noopener">地址</a><br>  这个是在pymrmr的github上看到的，可以在线执行mrmr，不过提交的数据不能超过2MB，然后往下翻，能看到这个</p>
+<p>  <img src="/images/20200718_1.png" alt=""><br>  根据自己的系统下载可执行文件，在终端执行<br><img src="/images/20200718_2.png" alt=""><br>可以看到其参数，就没在这里解释其参数了，值得注意的是，如果数据太大的要，要手动设置行和列。<br>演示这个我用的是win10，因为我是双系统啊，<del>双系统就是好</del><br>  如果在加上os.system()就能不需要单独去运行这个程序了，这里没给出实现方法</p>
+</li>
 </ul>
 <h1 id="mifs模块"><a href="#mifs模块" class="headerlink" title="mifs模块"></a>mifs模块</h1><p><a href="https://github.com/danielhomola/mifs" target="_blank" rel="noopener">github链接</a></p>
 <h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><p>好像没有pip install的样子<br>得从上面的github链接，clone或者下载下来<br>在此之前需要安装</p>
@@ -181,7 +191,7 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://jizhiyi.github.io/2020/07/18/2020-07-18/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://jizhiyi.github.io/2020/07/18/python%E4%B8%AD%E4%BD%BF%E7%94%A8mRMR/" alt="微信分享二维码">
     </div>
 </div>
 
